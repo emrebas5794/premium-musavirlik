@@ -2,18 +2,18 @@ import Link from "next/link";
 
 const announcements = [
   {
-    title: "TEKNOPARK FİRMALARI YMM TASDİK RAPOR ZORUNLULUĞU",
-    date: "04.03.2026",
+    title: "En Yeni Finansman Yöntemi: Kitlesel Fonlama",
+    date: "2025",
     href: "/duyurular",
   },
   {
-    title: "📢 Teknopark/Teknokent Firmalarına Kritik Hatırlatma",
-    date: "21.04.2025",
+    title: "İhracat Bedellerinin Yurda Getirilmemesi Durumunda Kesilen İdari Para Cezaları",
+    date: "2025",
     href: "/duyurular",
   },
   {
-    title: "Teknopark / Teknokent Danışmanlığı, 4691 Mevzuat Yönetimi",
-    date: "10.01.2025",
+    title: "Startup Fonlama Nedir ve Nasıl Yapılır?",
+    date: "2024",
     href: "/duyurular",
   },
 ];
@@ -22,11 +22,10 @@ export default function Announcements() {
   return (
     <section className="bg-silver-light py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16">
           <div>
             <h5 className="text-primary-color sub-title-side-line mb-3 text-sm md:text-base">
-              Premium Danışmanlık
+              PMDTR - Premium Danışmanlık
             </h5>
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#151a33] mb-0">Duyurular</h2>
           </div>
@@ -35,7 +34,6 @@ export default function Announcements() {
           </Link>
         </div>
 
-        {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {announcements.map((item, idx) => (
             <div key={idx} className="news-wrapper group">

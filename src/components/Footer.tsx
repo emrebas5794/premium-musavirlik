@@ -3,9 +3,8 @@ import Link from "next/link";
 const quickLinks = [
   { label: "Anasayfa", href: "/" },
   { label: "Hizmetlerimiz", href: "/hizmetler" },
-  { label: "İş Ortaklarımız", href: "/is-ortaklari" },
-  { label: "Kariyer", href: "/kariyer" },
-  { label: "Blog", href: "/blog" },
+  { label: "Referanslar", href: "/referanslar" },
+  { label: "Duyurular", href: "/duyurular" },
   { label: "İletişim", href: "/iletisim" },
 ];
 
@@ -25,41 +24,32 @@ export default function Footer() {
       <div className="footer-main-area">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
-            {/* Logo + Description */}
+            {/* Logo */}
             <div className="footer-widget">
-              <img src="/logo.png" alt="PMDTR - Premium Danışmanlık" className="h-10 w-auto mb-5" />
+              <img src="/logo.png" alt="PMDTR" className="h-10 w-auto mb-5" />
               <p className="text-light-gray text-xs md:text-sm leading-relaxed">
-                PMDTR - Premium Danışmanlık; muhasebe, mali müşavirlik, vergi, SGK ve danışmanlık alanlarında uzman kadrosuyla hizmet vermektedir.
+                PMDTR - Premium Danışmanlık; muhasebe, mali müşavirlik, vergi, SGK ve danışmanlık alanlarında 40 kişilik uzman kadrosuyla 2018&apos;den beri hizmet vermektedir.
               </p>
             </div>
 
-            {/* Quick Menu */}
             <div className="footer-widget">
               <h5 className="widget-title text-base md:text-lg">Hızlı Menü</h5>
               <ul className="footer-widget-list space-y-1.5">
                 {quickLinks.map((link, idx) => (
-                  <li key={idx}>
-                    <Link href={link.href} className="text-xs md:text-sm">
-                      {link.label}
-                    </Link>
-                  </li>
+                  <li key={idx}><Link href={link.href} className="text-xs md:text-sm">{link.label}</Link></li>
                 ))}
               </ul>
             </div>
 
-            {/* Services */}
             <div className="footer-widget">
               <h5 className="widget-title text-base md:text-lg">Hizmetlerimiz</h5>
               <ul className="footer-widget-list space-y-1.5">
                 {services.map((s, idx) => (
-                  <li key={idx}>
-                    <Link href="/hizmetler" className="text-xs md:text-sm">{s}</Link>
-                  </li>
+                  <li key={idx}><Link href="/hizmetler" className="text-xs md:text-sm">{s}</Link></li>
                 ))}
               </ul>
             </div>
 
-            {/* Contact */}
             <div className="footer-widget">
               <h5 className="widget-title text-base md:text-lg">İletişim</h5>
               <address className="not-italic mb-4 md:mb-6">
@@ -79,9 +69,7 @@ export default function Footer() {
               </address>
               <div className="flex gap-2 md:gap-3">
                 {["📷", "🔗", "💬"].map((icon, i) => (
-                  <a key={i} href="#" className="text-white/60 hover:text-white text-sm md:text-base transition" aria-label="Sosyal Medya">
-                    {icon}
-                  </a>
+                  <a key={i} href="#" className="text-white/60 hover:text-white text-sm md:text-base transition">{icon}</a>
                 ))}
               </div>
             </div>
