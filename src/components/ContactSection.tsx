@@ -4,17 +4,13 @@ import { useState } from "react";
 
 const serviceOptions = [
   "Hizmet Seçiniz",
-  "Şirket Kuruluş İşlemleri",
-  "Teknopark Danışmanlığı",
-  "Kosgeb ve Tübitak Proje Süreçleri",
-  "Mali Müşavirlik Hizmeti",
-  "Ar-Ge ve Tasarım Merkezi Başvuru Süreçleri",
-  "Belgelendirme Hizmetleri",
-  "Eğitim Hizmetleri",
-  "Patent Süreçleri",
-  "Web Tasarım Hizmetleri",
-  "Bordrolama Hizmetleri",
-  "Stratejik İş Ortaklığı ve Birliktelik",
+  "Muhasebe ve Mali Müşavirlik Hizmetleri",
+  "KDV ve ÖTV İade Hizmetleri",
+  "Bordrolama",
+  "Şirket Kurma Hizmetleri",
+  "Vergi Danışmanlığı",
+  "İş Hukuku Danışmanlığı",
+  "Diğer",
 ];
 
 export default function ContactSection() {
@@ -44,7 +40,7 @@ export default function ContactSection() {
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
-                  <p className="text-white/60 text-sm md:text-base">Tanıtım Videosu</p>
+                  <p className="text-white/60 text-sm md:text-base">PMDTR Tanıtım</p>
                 </div>
               </div>
             </div>

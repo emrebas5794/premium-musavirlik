@@ -5,18 +5,13 @@ import Link from "next/link";
 
 const slides = [
   {
-    title: "Sizde en hızlı çözümlere bizim ile birlikte ulaşmak ister misiniz?",
-    desc: "Premium Danışmanlık firması olarak yenilenen ve değişime uğrayan bütün süreçlere en hızlı bir şekilde sizlere çözümler sunarak daima birlikte büyümeyi hedefliyoruz.",
+    title: "Premium Danışmanlık Hizmetleri",
+    desc: "PMDTR olarak muhasebe, mali müşavirlik, vergi, SGK ve danışmanlık alanlarında uzman kadromuzla hizmetinizdeyiz. İşletmenizin finansal süreçlerini profesyonel ekibimize emanet edin.",
   },
   {
-    title: "Fikirlerinizi Gerçekten Önemsiyoruz",
-    desc: "Attığınız her adımda, sektöre katmış olduğunuz her değerde, en ufak düşüncenize ait fikirlerinizi önemsiyoruz. Sizler ile büyümeyi hedefliyor, tecrübemizi en iyi şekilde aktarmayı istiyoruz.",
+    title: "İşletmenizi Geleceğe Taşıyın",
+    desc: "Vergi planlaması, KDV iadesi, şirket kurulumu ve uluslararası vergi danışmanlığı alanlarında 360 derece çözüm ortağınız. Sizin için en doğru stratejiyi birlikte belirleyelim.",
   },
-];
-
-const gradients = [
-  "linear-gradient(135deg, #0a2a35, #09334f, #0e4354)",
-  "linear-gradient(135deg, #0e4354, #09334f, #0a3a40)",
 ];
 
 export default function HomeSlider() {
@@ -37,7 +32,7 @@ export default function HomeSlider() {
             className={`slide-item absolute inset-0 transition-opacity duration-1000 ${
               idx === current ? "opacity-100 z-10 relative" : "opacity-0 z-0"
             }`}
-            style={{ background: gradients[idx] }}
+            style={{ background: `linear-gradient(135deg, #0a2a35, #09334f, #0e4354)` }}
           >
             <div className="auto-container max-w-7xl mx-auto px-4">
               <div className="content-box text-center">
@@ -45,7 +40,7 @@ export default function HomeSlider() {
                 <p>{slide.desc}</p>
                 <div className="btn-box">
                   <Link href="/iletisim" className="cs-btn-one btn-gradient-color">
-                    İletişim
+                    İletişime Geç
                   </Link>
                 </div>
               </div>
@@ -53,8 +48,6 @@ export default function HomeSlider() {
           </div>
         ))}
       </div>
-
-      {/* Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
         {slides.map((_, i) => (
           <button

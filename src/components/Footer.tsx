@@ -3,19 +3,20 @@ import Link from "next/link";
 const quickLinks = [
   { label: "Anasayfa", href: "/" },
   { label: "Hizmetlerimiz", href: "/hizmetler" },
-  { label: "Referanslar", href: "/referanslar" },
-  { label: "Duyurular", href: "/duyurular" },
+  { label: "İş Ortaklarımız", href: "/is-ortaklari" },
+  { label: "Kariyer", href: "/kariyer" },
+  { label: "Blog", href: "/blog" },
   { label: "İletişim", href: "/iletisim" },
 ];
 
 const services = [
-  "Şirket Kuruluş İşlemleri",
-  "Teknopark Danışmanlığı",
-  "Kosgeb ve Tübitak Proje Süreçleri",
-  "Mali Müşavirlik Hizmeti",
-  "Ar-Ge ve Tasarım Merkezi Başvuru Süreçleri",
-  "Eğitim Hizmetleri",
-  "Patent Süreçleri",
+  "Muhasebe ve Mali Müşavirlik",
+  "KDV ve ÖTV İade Hizmetleri",
+  "Bordrolama",
+  "Şirket Kurma Hizmetleri",
+  "Vergi Danışmanlığı",
+  "İş Hukuku Danışmanlığı",
+  "Uluslararası Vergi Hizmetleri",
 ];
 
 export default function Footer() {
@@ -26,9 +27,9 @@ export default function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             {/* Logo + Description */}
             <div className="footer-widget">
-              <img src="/logo.png" alt="Premium Danışmanlık" className="h-10 w-auto mb-5" />
+              <img src="/logo.png" alt="PMDTR - Premium Danışmanlık" className="h-10 w-auto mb-5" />
               <p className="text-light-gray text-xs md:text-sm leading-relaxed">
-                Premium Danışmanlık firmasının ortaya çıkış amacı Teknoloji Geliştirme Bölgelerinde faaliyet gösteren girişimci firmalarının süreçlerinin en doğru bir şekilde yönetilmesini sağlamak olmuştur.
+                PMDTR - Premium Danışmanlık; muhasebe, mali müşavirlik, vergi, SGK ve danışmanlık alanlarında uzman kadrosuyla hizmet vermektedir.
               </p>
             </div>
 
@@ -63,22 +64,21 @@ export default function Footer() {
               <h5 className="widget-title text-base md:text-lg">İletişim</h5>
               <address className="not-italic mb-4 md:mb-6">
                 <p className="text-light-gray text-xs md:text-sm mb-2">
-                  <strong className="text-gray-300">Merkez Ofis:</strong><br />
-                  İstanbul / Türkiye
+                  <strong className="text-gray-300">Adres:</strong><br />
+                  Kartaltepe Mah. İncirli Cad. No.46 D.11<br />Bakırköy / İSTANBUL
                 </p>
-                <p className="text-light-gray text-xs md:text-sm mb-3">
-                  <strong className="text-gray-300">Ar-Ge Ofisi:</strong><br />
-                  Cumhuriyet Mh. Mithatpaşa Cd. No:26/16 K:2 Çankaya / ANKARA
-                </p>
-                <a href="tel:+905552968787" className="text-light-gray text-xs md:text-sm flex items-center gap-2 mb-2 hover:text-[#55bab3] transition">
-                  📞 0 555 296 87 87
+                <a href="tel:+902124380464" className="text-light-gray text-xs md:text-sm flex items-center gap-2 mb-2 hover:text-[#55bab3] transition">
+                  📞 +90 212 438 0464
                 </a>
-                <a href="mailto:info@premiumdanismanlik.com" className="text-light-gray text-xs md:text-sm flex items-center gap-2 hover:text-[#55bab3] transition">
-                  ✉️ info@premiumdanismanlik.com
+                <a href="tel:+905453660996" className="text-light-gray text-xs md:text-sm flex items-center gap-2 mb-2 hover:text-[#55bab3] transition">
+                  📱 +90 545 366 09 96
+                </a>
+                <a href="mailto:info@pmdtr.com" className="text-light-gray text-xs md:text-sm flex items-center gap-2 hover:text-[#55bab3] transition">
+                  ✉️ info@pmdtr.com
                 </a>
               </address>
               <div className="flex gap-2 md:gap-3">
-                {["📷", "𝕏", "💬", "🔗", "📍"].map((icon, i) => (
+                {["📷", "🔗", "💬"].map((icon, i) => (
                   <a key={i} href="#" className="text-white/60 hover:text-white text-sm md:text-base transition" aria-label="Sosyal Medya">
                     {icon}
                   </a>
@@ -93,7 +93,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <span className="text-light-gray text-xs md:text-sm">
             © {new Date().getFullYear()} Tüm hakları saklıdır.{" "}
-            <Link href="/" className="text-white hover:text-[#55bab3] transition">Premium Danışmanlık</Link>
+            <Link href="/" className="text-white hover:text-[#55bab3] transition">PMDTR - Premium Danışmanlık</Link>
           </span>
         </div>
       </div>

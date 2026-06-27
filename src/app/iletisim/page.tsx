@@ -5,14 +5,25 @@ import PageBanner from "@/components/PageBanner";
 
 const serviceOptions = [
   "Hizmet Seçiniz",
-  "Şirket Kuruluş İşlemleri",
-  "Teknopark Danışmanlığı",
-  "Kosgeb ve Tübitak Proje Süreçleri",
-  "Mali Müşavirlik Hizmeti",
-  "Ar-Ge ve Tasarım Merkezi Başvuru Süreçleri",
-  "Belgelendirme Hizmetleri",
-  "Eğitim Hizmetleri",
-  "Patent Süreçleri",
+  "Muhasebe ve Mali Müşavirlik Hizmetleri",
+  "KDV ve ÖTV İade Hizmetleri",
+  "Şirket Tür Değişikliği",
+  "Şirket Birleşme ve Satın Alma Hizmetleri",
+  "Transfer Fiyatlandırması",
+  "Uluslararası Vergi Hizmetleri",
+  "Bordrolama",
+  "İş ve Sosyal Güvenlik Check-Up Hizmetleri",
+  "İkamet İzni & Çalışma İzni",
+  "Asgari İşçilik Danışmanlığı",
+  "Alt İşveren (Taşeron) Denetimi",
+  "Emeklilik ve Tahsis İşlemleri Danışmanlığı",
+  "Şirket Kurma Hizmetleri",
+  "Vergi Danışmanlığı",
+  "Yönetim Destek Hizmetleri",
+  "Genel Kurul Danışmanlığı",
+  "İş Hukuku Danışmanlığı",
+  "Vergi İhtilafları Danışmanlığı",
+  "Sosyal Güvenlik Teşvikleri Danışmanlığı",
 ];
 
 export default function Iletisim() {
@@ -25,52 +36,52 @@ export default function Iletisim() {
         breadcrumbs={[{ label: "Anasayfa", href: "/" }, { label: "İletişim" }]}
       />
 
-      <section className="pdt-110 pdb-95">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4">
           {/* Contact Blocks */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mrb-60">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 md:mb-16">
             <div className="contact-block flex items-start gap-6">
               <div className="contact-icon flex-shrink-0">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#0e4354] to-[#55bab3] rounded-lg flex items-center justify-center text-white text-2xl">
-                  🏢
+                  📍
                 </div>
               </div>
               <div>
-                <h5 className="mrb-10">Merkez Ofis</h5>
-                <p className="text-gray-500">İstanbul / Türkiye</p>
-              </div>
-            </div>
-
-            <div className="contact-block flex items-start gap-6">
-              <div className="contact-icon flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#0e4354] to-[#55bab3] rounded-lg flex items-center justify-center text-white text-2xl">
-                  🔬
-                </div>
-              </div>
-              <div>
-                <h5 className="mrb-10">Ar-Ge Ofisi</h5>
-                <p className="text-gray-500">
-                  Cumhuriyet Mh. Mithatpaşa Cd. No:26/16 K:2 Çankaya / ANKARA
+                <h5 className="text-lg font-semibold mb-2">Adres</h5>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  Kartaltepe Mah. İncirli Cad. No.46 D.11<br />Bakırköy / İSTANBUL
                 </p>
               </div>
             </div>
 
             <div className="contact-block flex items-start gap-6">
               <div className="contact-icon flex-shrink-0">
-                <div className="space-y-2">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#0e4354] to-[#55bab3] rounded-lg flex items-center justify-center text-white text-2xl">
-                    ✉️
-                  </div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#0e4354] to-[#55bab3] rounded-lg flex items-center justify-center text-white text-2xl">
-                    📞
-                  </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-[#0e4354] to-[#55bab3] rounded-lg flex items-center justify-center text-white text-2xl">
+                  📞
                 </div>
               </div>
               <div>
-                <h5 className="mrb-10">E-Posta</h5>
-                <p className="mrb-10 text-gray-500">info@premiumdanismanlik.com</p>
-                <h5 className="mrb-10">Telefon</h5>
-                <p className="text-gray-500">0 555 296 87 87</p>
+                <h5 className="text-lg font-semibold mb-2">Telefon</h5>
+                <p className="text-gray-500 text-sm">
+                  <a href="tel:+902124380464" className="hover:text-primary">+90 212 438 0464</a>
+                </p>
+                <p className="text-gray-500 text-sm mt-1">
+                  <a href="tel:+905453660996" className="hover:text-primary">+90 545 366 09 96</a>
+                </p>
+              </div>
+            </div>
+
+            <div className="contact-block flex items-start gap-6">
+              <div className="contact-icon flex-shrink-0">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#0e4354] to-[#55bab3] rounded-lg flex items-center justify-center text-white text-2xl">
+                  ✉️
+                </div>
+              </div>
+              <div>
+                <h5 className="text-lg font-semibold mb-2">E-Posta</h5>
+                <p className="text-gray-500 text-sm">
+                  <a href="mailto:info@pmdtr.com" className="hover:text-primary">info@pmdtr.com</a>
+                </p>
               </div>
             </div>
           </div>
@@ -78,15 +89,15 @@ export default function Iletisim() {
           {/* Contact Form + Info */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
-              <h5 className="sub-title-side-line text-primary-color mrt-0 mrb-15">
-                Premium Danışmanlık
+              <h5 className="sub-title-side-line text-primary-color mb-3 text-sm md:text-base">
+                PMDTR - Premium Danışmanlık
               </h5>
-              <h2 className="text-[42px] font-extrabold leading-tight mrb-30">İletişim Formu</h2>
-              <p className="mrb-40 text-gray-500">
-                Yandaki formu doldurarak bizimle iletişime geçebilir veya sosyal medya üzerinden bizimle iletişime geçebilirsiniz.
+              <h2 className="text-3xl md:text-5xl font-extrabold text-[#151a33] mb-6">İletişim Formu</h2>
+              <p className="text-gray-500 mb-8">
+                Aşağıdaki formu doldurarak bizimle iletişime geçebilir veya sosyal medya üzerinden bizimle iletişime geçebilirsiniz.
               </p>
               <div className="flex gap-3">
-                {["🔗", "📷", "𝕏", "💬"].map((icon, i) => (
+                {["📷", "🔗", "💬"].map((icon, i) => (
                   <a key={i} href="#" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-lg hover:bg-primary-light transition">
                     {icon}
                   </a>
@@ -124,9 +135,6 @@ export default function Iletisim() {
                     </div>
                     <div className="form-group">
                       <textarea className="form-control" rows={4} placeholder="Mesajınız" />
-                    </div>
-                    <div className="form-group">
-                      <input type="text" className="form-control" placeholder="Güvenlik Kodu" />
                     </div>
                     <button type="submit" className="cs-btn-one btn-gradient-color btn-md btn-block">
                       Gönder

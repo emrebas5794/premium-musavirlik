@@ -5,24 +5,17 @@ import Footer from "@/components/Footer";
 import BackToTop from "@/components/WhatsAppBackTop";
 
 export const metadata: Metadata = {
-  title: "Premium Danışmanlık | Teknopark Süreç Danışmanlığı & Yazılım",
+  title: "PMDTR - Premium Danışmanlık | Muhasebe, Vergi, SGK, Danışmanlık",
   description:
-    "Premium Danışmanlık - Teknopark süreç danışmanlığı, KOSGEB, TÜBİTAK, mali müşavirlik, AR-GE merkezi başvuruları ve patent süreçlerinde uzman kadro.",
+    "PMDTR Premium Danışmanlık; muhasebe, mali müşavirlik, vergi, KDV iadesi, SGK, bordrolama, şirket kurma ve danışmanlık hizmetleri. Bakırköy / İstanbul.",
   keywords: [
-    "danışmanlık",
-    "teknopark",
-    "teknokent",
-    "arge",
-    "tübitak",
-    "kosgeb",
-    "mali müşavirlik",
-    "şirket kuruluş",
-    "patent",
+    "muhasebe", "mali müşavirlik", "vergi danışmanlığı", "kdv iadesi", "sgk",
+    "bordrolama", "şirket kurma", "pmdtr", "premium danışmanlık", "bakırköy",
   ],
   openGraph: {
-    title: "Premium Danışmanlık | Teknopark Süreç Danışmanlığı & Yazılım",
+    title: "PMDTR - Premium Danışmanlık | Muhasebe, Vergi, SGK, Danışmanlık",
     description:
-      "Premium Danışmanlık - Teknopark süreç danışmanlığı, KOSGEB, TÜBİTAK, mali müşavirlik, AR-GE merkezi başvuruları ve patent süreçlerinde uzman kadro.",
+      "PMDTR Premium Danışmanlık; muhasebe, mali müşavirlik, vergi, KDV iadesi, SGK, bordrolama, şirket kurma ve danışmanlık hizmetleri.",
     locale: "tr_TR",
   },
 };

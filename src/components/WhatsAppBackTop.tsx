@@ -22,7 +22,7 @@ export default function BackToTop() {
         ↑
       </div>
       <a
-        href="https://wa.me/905552968787"
+        href="https://wa.me/905453660996"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-box"
