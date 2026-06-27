@@ -1,23 +1,23 @@
-import HeroSlider from "@/components/HeroSlider";
+import HomeSlider from "@/components/HomeSlider";
 import Announcements from "@/components/Announcements";
-import References from "@/components/References";
-import ServiceCards from "@/components/ServiceCards";
-import StatsSection from "@/components/StatsSection";
-import ProcessSection from "@/components/ProcessSection";
+import ClientCarousel from "@/components/ClientCarousel";
+import ServiceFeatureCards from "@/components/ServiceFeatureCards";
+import AboutStats from "@/components/AboutStats";
+import ProcessServices from "@/components/ProcessServices";
 import Testimonials from "@/components/Testimonials";
-import ContactForm from "@/components/ContactForm";
+import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   return (
     <>
-      <HeroSlider />
+      <HomeSlider />
       <Announcements />
-      <References />
-      <ServiceCards />
-      <StatsSection />
-      <ProcessSection />
+      <ClientCarousel />
+      <ServiceFeatureCards />
+      <AboutStats />
+      <ProcessServices />
       <Testimonials />
-      <ContactForm />
+      <ContactSection />
     </>
   );
 }

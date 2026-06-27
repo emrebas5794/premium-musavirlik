@@ -1,70 +1,61 @@
 import Link from "next/link";
-import { FaCalendarAlt, FaArrowRight } from "react-icons/fa";
 
 const announcements = [
   {
-    id: 1,
     title: "TEKNOPARK FİRMALARI YMM TASDİK RAPOR ZORUNLULUĞU",
     date: "04.03.2026",
-    image: null,
     href: "#",
   },
   {
-    id: 2,
     title: "📢 Teknopark/Teknokent Firmalarına Kritik Hatırlatma",
     date: "21.04.2025",
-    image: null,
     href: "#",
   },
   {
-    id: 3,
     title: "Teknopark / Teknokent Danışmanlığı, 4691 Mevzuat Yönetimi",
     date: "10.01.2025",
-    image: null,
     href: "#",
   },
 ];
 
 export default function Announcements() {
   return (
-    <section id="duyurular" className="py-20 bg-silver-light">
+    <section className="bg-silver-light pdt-105 pdb-80">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mrb-60">
           <div>
-            <h5 className="section-subtitle mb-4">Premium Danışmanlık</h5>
-            <h2 className="section-title">Duyurular</h2>
+            <h5 className="text-primary-color sub-title-side-line mrb-15">
+              Premium Danışmanlık
+            </h5>
+            <h2 className="mrb-30">Duyurular</h2>
           </div>
-          <Link href="#" className="btn-gradient mt-4 md:mt-0">
+          <Link href="/duyurular" className="cs-btn-one btn-gradient-color btn-md">
             Tümünü Gör
           </Link>
         </div>
 
-        {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {announcements.map((item) => (
-            <article key={item.id} className="news-card group">
-              <div className="news-image bg-gradient-to-br from-primary to-primary-light h-48 flex items-center justify-center">
-                <span className="text-white/60 text-5xl font-bold">📋</span>
-              </div>
-              <div className="p-6">
-                <h4 className="font-semibold text-lg mb-4 group-hover:text-primary transition line-clamp-2">
-                  <Link href={item.href}>{item.title}</Link>
-                </h4>
-                <div className="flex items-center justify-between">
-                  <span className="flex items-center gap-2 text-sm text-gray-500 bg-gray-100 px-3 py-2 border-l-2 border-primary">
-                    <FaCalendarAlt className="text-primary" size={12} />
-                    {item.date}
-                  </span>
-                  <Link
-                    href={item.href}
-                    className="text-primary opacity-0 group-hover:opacity-100 transition flex items-center gap-1 text-sm"
-                  >
-                    Detay <FaArrowRight size={10} />
-                  </Link>
+          {announcements.map((item, idx) => (
+            <div key={idx} className="news-wrapper">
+              <div className="news-thumb">
+                <div className="h-[220px] bg-gradient-to-br from-[#0e4354] to-[#55bab3] flex items-center justify-center">
+                  <span className="text-white/40 text-6xl">📋</span>
                 </div>
               </div>
-            </article>
+              <div className="news-details">
+                <div className="news-description mb-20">
+                  <h4 className="the-title mrb-30">
+                    <Link href={item.href}>{item.title}</Link>
+                  </h4>
+                  <div className="news-bottom-meta">
+                    <span className="entry-date mrr-20">
+                      <span className="mrr-10 text-primary-color">📅</span>
+                      {item.date}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
