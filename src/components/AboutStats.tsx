@@ -9,19 +9,21 @@ const stats = [
   { value: 75, suffix: "+", label: "Tübitak / Kosgeb Projeleri" },
 ];
 
+const destekler = ["TÜBİTAK", "KOSGEB", "TEKNOPARK", "TEKNOKENT", "AR-GE"];
+
 export default function AboutStats() {
   return (
-    <section className="pdt-50 pdb-50">
+    <section className="py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Devlet Destekleri */}
-        <div className="text-center mrb-60">
-          <h2 className="mrb-30">Devlet Destekleri</h2>
-          <p className="text-gray-500 max-w-2xl mx-auto mrb-40">
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#151a33] mb-4">Devlet Destekleri</h2>
+          <p className="text-gray-500 max-w-2xl mx-auto mb-8 md:mb-10 px-2">
             Birçok kurumun çeşitli Hibe ve Teşviklerini iş planlarına entegre ederek, işletmelerin projelerinin finansmanını kolaylaştırıyoruz.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mrb-30">
-            {["TÜBİTAK", "KOSGEB", "TEKNOPARK", "TEKNOKENT", "AR-GE"].map((name) => (
-              <div key={name} className="bg-silver-light rounded-lg px-8 py-4 text-primary font-bold text-sm shadow-sm">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8">
+            {destekler.map((name) => (
+              <div key={name} className="bg-silver-light rounded-lg px-5 py-3 md:px-8 md:py-4 text-primary font-bold text-xs md:text-sm shadow-sm border border-gray-100">
                 {name}
               </div>
             ))}
@@ -32,12 +34,14 @@ export default function AboutStats() {
         </div>
 
         {/* Funfact Counters */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat, idx) => (
-            <div key={idx} className="funfact">
-              <div className="icon">+</div>
-              <h2 className="counter">{stat.value}{stat.suffix}</h2>
-              <h5 className="title">{stat.label}</h5>
+            <div key={idx} className="funfact text-center p-4 md:p-5">
+              <div className="icon text-3xl md:text-4xl text-primary-light font-extrabold mb-1">+</div>
+              <h2 className="counter text-3xl md:text-4xl font-extrabold text-primary mb-1">
+                {stat.value}{stat.suffix}
+              </h2>
+              <h5 className="title text-xs md:text-sm text-gray-500 font-semibold max-w-[220px] mx-auto">{stat.label}</h5>
             </div>
           ))}
         </div>

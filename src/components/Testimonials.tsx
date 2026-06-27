@@ -23,27 +23,29 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="pdt-80 pdb-110">
+    <section className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mrb-60">
-          <h5 className="shadow-text">Premium</h5>
-          <h5 className="text-primary-color mrb-30 relative inline-block">
-            <span className="absolute -top-3 left-1/2 -translate-x-1/2 w-10 h-[2px] bg-primary" />
+        <div className="text-center mb-12 md:mb-16">
+          <h5 className="shadow-text text-5xl md:text-7xl lg:text-8xl">Premium</h5>
+          <h5 className="text-primary-color mb-6 md:mb-8 relative inline-block text-sm md:text-base">
+            <span className="absolute -top-2 md:-top-3 left-1/2 -translate-x-1/2 w-8 md:w-10 h-[2px] bg-primary" />
             Premium Danışmanlık
           </h5>
-          <h2>Müşterilerimiz Ne Diyor?</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#151a33]">
+            Müşterilerimiz Ne Diyor?
+          </h2>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {testimonials.map((item, idx) => (
             <div key={idx} className="testimonial-item">
-              <span className="quote-icon">❞</span>
-              <h4 className="client-name">{item.name}</h4>
-              <h6 className="client-designation">{item.title}</h6>
+              <span className="quote-icon opacity-20 md:opacity-25">❞</span>
+              <h4 className="client-name text-lg md:text-xl">{item.name}</h4>
+              <h6 className="client-designation text-sm md:text-base">{item.title}</h6>
               <div className="testimonial-content">
-                <p className="comments">{item.text}</p>
+                <p className="comments text-sm md:text-base">{item.text}</p>
               </div>
             </div>
           ))}

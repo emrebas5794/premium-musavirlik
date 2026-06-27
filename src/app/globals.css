@@ -225,6 +225,15 @@ img { border: none; max-width: 100%; height: auto; }
 .header-navigation-area {
   background: #fff;
   padding: 5px 0;
+  transition: all 0.3s ease;
+}
+.header-navigation-area.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
 }
 .navbar-brand.logo img {
   max-height: 55px;
@@ -339,7 +348,8 @@ img { border: none; max-width: 100%; height: auto; }
 .side-panel-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
   z-index: 9998;
   opacity: 0;
   visibility: hidden;
@@ -936,22 +946,186 @@ img { border: none; max-width: 100%; height: auto; }
 }
 
 /* ========== RESPONSIVE ========== */
+
+/* Container centering - ensure all sections use consistent container */
+.container,
+.max-w-7xl {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* LG Desktop (max 1199px) */
+@media (max-width: 1199px) {
+  .main-menu nav > ul > li > a { padding: 25px 10px; font-size: 14px; }
+  .funfact .counter { font-size: 36px; }
+  .section-title-block h2 { font-size: 36px; }
+}
+
+/* MD Tablet (max 991px) */
 @media (max-width: 991px) {
   h1 { font-size: 36px; line-height: 44px; }
   h2 { font-size: 30px; line-height: 38px; }
   h3 { font-size: 22px; }
+  h4 { font-size: 18px; line-height: 26px; }
+  h5 { font-size: 16px; }
+  p { font-size: 15px; }
+
+  /* Header */
+  .header-top-area { display: none !important; }
+  .header-navigation-area { padding: 10px 0; }
+  .navbar-brand.logo img { max-height: 45px; }
+
+  /* Banner */
   .banner-section .slide-item { height: 70vh; min-height: 500px; }
   .banner-section .slide-item .content-box h1 { font-size: 32px; line-height: 40px; }
   .banner-section .slide-item .content-box p { font-size: 15px; }
-  .minus-mrt-130 { margin-top: -60px; }
+
+  /* Section spacing */
+  .pdt-105 { padding-top: 60px; }
+  .pdt-110 { padding-top: 60px; }
+  .pdb-80 { padding-bottom: 50px; }
+  .pdb-110 { padding-bottom: 60px; }
+  .pdb-130 { padding-bottom: 70px; }
+  .pdb-150 { padding-bottom: 80px; }
+  .minus-mrt-130 { margin-top: -40px; }
+
+  /* Page title */
   .page-title-section { padding: 50px 0; }
+  .page-title-section h1 { font-size: 32px; }
+
+  /* Feature box */
+  .feature-box .feature-thumb img { height: 160px; }
+  .feature-box .feature-content { padding: 15px 20px; }
+  .feature-box .feature-content .title h3 { font-size: 16px; }
+
+  /* News wrapper */
+  .news-wrapper .news-thumb img { height: 180px; }
+  .news-wrapper .news-details { padding: 20px; }
+  .news-wrapper .news-details .news-description h4.the-title { font-size: 16px; }
+
+  /* Service box */
+  .service-box { height: auto; min-height: 260px; }
+  .service-box .service-icon { margin-top: 20px; margin-bottom: 20px; }
+
+  /* Testimonial */
+  .testimonial-item { padding: 25px; }
+
+  /* Footer */
+  .footer-main-area { padding: 50px 0 30px; }
+
+  /* Contact */
+  .contact-block { padding: 20px; }
+
+  /* Funfact */
+  .funfact { padding: 15px; }
+  .funfact .counter { font-size: 32px; }
+  .funfact .title { font-size: 13px; }
+
+  /* Title underline */
+  .title-under-line::before { display: none; }
+  .title-under-line { margin-bottom: 30px !important; }
+
+  /* Shadow text */
+  .shadow-text { font-size: 50px; margin-bottom: -20px; }
+
+  /* Side panel */
+  .side-panel-content { width: 300px; right: -300px; }
 }
 
+/* SM Mobile (max 767px) */
 @media (max-width: 767px) {
   h1 { font-size: 28px; line-height: 36px; }
   h2 { font-size: 24px; line-height: 32px; }
+  h3 { font-size: 20px; }
+  h4 { font-size: 17px; line-height: 24px; }
+  h5 { font-size: 15px; }
+
+  /* Header */
   .banner-section .slide-item { height: 60vh; min-height: 400px; }
-  .service-box { height: auto; min-height: 250px; }
+  .banner-section .slide-item .content-box h1 { font-size: 26px; line-height: 34px; }
+  .banner-section .slide-item .content-box p { font-size: 14px; line-height: 22px; }
+
+  .cs-btn-one { padding: 12px 30px; font-size: 13px; }
+  .cs-btn-one.btn-md { padding: 14px 36px; }
+
+  /* Section spacing */
+  .pdt-105 { padding-top: 40px; }
+  .pdt-110 { padding-top: 40px; }
+  .pdb-80 { padding-bottom: 30px; }
+  .pdb-110 { padding-bottom: 40px; }
+  .pdb-130 { padding-bottom: 50px; }
+  .pdb-150 { padding-bottom: 60px; }
+  .minus-mrt-130 { margin-top: -20px; }
+
+  /* Page title */
+  .page-title-section { padding: 40px 0; }
+  .page-title-section h1 { font-size: 26px; }
+
+  /* Feature box */
+  .feature-box .feature-thumb img { height: 140px; }
+
+  /* News wrapper */
+  .news-wrapper .news-thumb img { height: 160px; }
+
+  /* Service box */
+  .service-box { min-height: auto; padding: 25px 15px; }
+  .service-box .service-icon { margin-top: 10px; margin-bottom: 15px; }
+  .service-box .service-icon img { height: 45px; }
+  .service-box .service-content .title h3 { font-size: 17px; }
+
+  /* Testimonial */
+  .testimonial-item { padding: 20px 15px; }
+  .testimonial-item .quote-icon { font-size: 2.5rem; right: 20px; top: 5px; }
+  .testimonial-item .client-name { font-size: 17px; }
+
+  /* Funfact */
+  .funfact .counter { font-size: 28px; }
+
+  /* Footer */
+  .footer-main-area { padding: 40px 0 20px; }
+  .footer-widget { margin-bottom: 20px; }
+
+  /* Contact form */
+  .request-a-call-back-form { padding: 25px 20px; }
+
+  /* Shadow text */
+  .shadow-text { font-size: 40px; margin-bottom: -15px; }
+
+  /* Video popup */
+  .video-popup { height: 250px !important; }
+
+  /* Side panel */
+  .side-panel-content { width: 280px; right: -280px; }
+
+  /* Social list */
+  .social-list.list-lg li a { height: 38px; width: 38px; font-size: 14px; }
+}
+
+/* XS Mobile (max 480px) */
+@media (max-width: 480px) {
+  h1 { font-size: 24px; line-height: 30px; }
+  h2 { font-size: 22px; line-height: 28px; }
+  h3 { font-size: 18px; }
+
+  .banner-section .slide-item { height: 55vh; min-height: 350px; }
+  .banner-section .slide-item .content-box h1 { font-size: 22px; line-height: 28px; }
+  .banner-section .slide-item .content-box p { font-size: 13px; }
+
+  .cs-btn-one { padding: 10px 24px; font-size: 12px; }
+  .cs-btn-one.btn-md { padding: 12px 28px; }
+
+  .section-title-block h2,
+  .title-box-center .title { font-size: 22px !important; }
+
+  .page-title-section h1 { font-size: 22px; }
+
+  .footer-widget .widget-title { font-size: 16px; margin-bottom: 15px; }
+
+  .back-to-top { right: 15px; bottom: 70px; width: 36px; height: 36px; font-size: 16px; line-height: 34px; }
+  .whatsapp-box { right: 15px; bottom: 10px; width: 48px; height: 48px; line-height: 48px; font-size: 22px; }
 }
 
 /* ========== ABOUT PAGE IMAGE ========== */

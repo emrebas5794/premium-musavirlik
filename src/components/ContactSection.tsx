@@ -27,24 +27,24 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="pdb-110 relative" data-overlay-dark="8">
+    <section className="py-16 md:py-24 relative" data-overlay-dark="8">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ background: "linear-gradient(135deg, #0e4354, #131c34, #55bab3)" }}
       />
       <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-10 items-start">
           {/* Video Area */}
           <div className="lg:col-span-3">
-            <div className="video-popup">
-              <div className="rounded-xl overflow-hidden bg-gradient-to-br from-[#0e4354]/30 to-[#55bab3]/30 h-[420px] flex items-center justify-center">
+            <div className="video-popup rounded-xl overflow-hidden">
+              <div className="bg-gradient-to-br from-[#0e4354]/30 to-[#55bab3]/30 h-64 md:h-[420px] flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mx-auto mrb-20 cursor-pointer hover:bg-white/20 transition">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-4 md:mb-5 cursor-pointer hover:bg-white/20 transition">
+                    <svg className="w-7 h-7 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
-                  <p className="text-white/60">Tanıtım Videosu</p>
+                  <p className="text-white/60 text-sm md:text-base">Tanıtım Videosu</p>
                 </div>
               </div>
             </div>
@@ -53,8 +53,9 @@ export default function ContactSection() {
           {/* Form */}
           <div className="lg:col-span-2">
             <div className="request-a-call-back-form">
-              <h3 className="mrt-0 mrb-20 solid-bottom-line">Bizimle İletişime Geçin</h3>
-              <p className="mrb-30 text-gray-500 text-sm">
+              <h3 className="text-xl md:text-2xl font-bold text-[#151a33] mb-2">Bizimle İletişime Geçin</h3>
+              <div className="w-16 h-1 bg-gradient-to-r from-[#0e4354] to-[#55bab3] rounded mb-4" />
+              <p className="text-gray-500 text-xs md:text-sm mb-5 md:mb-6">
                 Aşağıdaki formu doldurarak bizimle iletişime geçebilirsiniz.
               </p>
 
@@ -82,11 +83,11 @@ export default function ContactSection() {
                       ))}
                     </select>
                   </div>
-                  <div className="form-group mrb-25">
+                  <div className="form-group mb-4 md:mb-5">
                     <input type="text" className="form-control" placeholder="Güvenlik Kodu" />
                   </div>
-                  <div className="form-group mrb-0">
-                    <button type="submit" className="cs-btn-one btn-primary-color btn-md btn-block">
+                  <div className="form-group mb-0">
+                    <button type="submit" className="cs-btn-one btn-primary-color btn-md btn-block text-sm md:text-base">
                       Gönder
                     </button>
                   </div>
