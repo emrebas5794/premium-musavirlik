@@ -80,9 +80,7 @@ export default function Header() {
               <div className="flex items-center justify-between py-2">
                 {/* Logo */}
                 <Link href="/" className="navbar-brand logo flex-shrink-0">
-                  <div className="h-[50px] w-[150px] bg-gradient-to-r from-[#0e4354] to-[#55bab3] rounded-lg flex items-center justify-center text-white font-bold text-xs">
-                    PREMIUM LOGO
-                  </div>
+                  <img src="/logo.png" alt="Premium Danışmanlık" className="h-[50px] w-auto" />
                 </Link>
 
                 {/* Desktop Menu */}
@@ -146,9 +144,7 @@ export default function Header() {
           <span className="text-2xl text-gray-600 hover:text-primary">&times;</span>
         </div>
         <div className="side-panel-logo mrb-30">
-          <div className="h-10 w-32 bg-gradient-to-r from-[#0e4354] to-[#55bab3] rounded flex items-center justify-center text-white font-bold text-xs">
-            PREMIUM LOGO
-          </div>
+          <img src="/logo.png" alt="Premium Danışmanlık" className="h-10 w-auto" />
         </div>
 
         {/* Mobile Nav Links */}

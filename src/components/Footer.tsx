@@ -26,9 +26,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             {/* Logo + Description */}
             <div className="footer-widget">
-              <div className="h-10 w-36 bg-gradient-to-r from-[#0e4354] to-[#55bab3] rounded flex items-center justify-center text-white font-bold text-xs mb-5">
-                PREMIUM LOGO
-              </div>
+              <img src="/logo.png" alt="Premium Danışmanlık" className="h-10 w-auto mb-5" />
               <p className="text-light-gray text-xs md:text-sm leading-relaxed">
                 Premium Danışmanlık firmasının ortaya çıkış amacı Teknoloji Geliştirme Bölgelerinde faaliyet gösteren girişimci firmalarının süreçlerinin en doğru bir şekilde yönetilmesini sağlamak olmuştur.
               </p>
