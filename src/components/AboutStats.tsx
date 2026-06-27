@@ -36,12 +36,12 @@ export default function AboutStats() {
         {/* Funfact Counters */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat, idx) => (
-            <div key={idx} className="funfact text-center p-4 md:p-5">
-              <div className="icon text-3xl md:text-4xl text-primary-light font-extrabold mb-1">+</div>
-              <h2 className="counter text-3xl md:text-4xl font-extrabold text-primary mb-1">
-                {stat.value}{stat.suffix}
-              </h2>
-              <h5 className="title text-xs md:text-sm text-gray-500 font-semibold max-w-[220px] mx-auto">{stat.label}</h5>
+            <div key={idx} className="funfact">
+              <div className="icon">
+                <span className="text-5xl text-primary">+</span>
+              </div>
+              <h2 className="counter">{stat.value}{stat.suffix}</h2>
+              <h5 className="title">{stat.label}</h5>
             </div>
           ))}
         </div>

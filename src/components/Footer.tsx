@@ -20,8 +20,8 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer className="footer bg-[#131c34]">
-      <div className="footer-main-area py-12 md:py-20">
+    <footer className="footer">
+      <div className="footer-main-area">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             {/* Logo + Description */}

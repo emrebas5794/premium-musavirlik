@@ -15,8 +15,8 @@ const slides = [
 ];
 
 const gradients = [
-  "linear-gradient(135deg, #0a2a35, #131c34, #0e4354)",
-  "linear-gradient(135deg, #0e4354, #131c34, #0a3a40)",
+  "linear-gradient(135deg, #0a2a35, #09334f, #0e4354)",
+  "linear-gradient(135deg, #0e4354, #09334f, #0a3a40)",
 ];
 
 export default function HomeSlider() {
@@ -29,28 +29,30 @@ export default function HomeSlider() {
   }, [next]);
 
   return (
-    <section className="banner-section relative overflow-hidden">
-      {slides.map((slide, idx) => (
-        <div
-          key={idx}
-          className={`slide-item text-center absolute inset-0 transition-opacity duration-1000 ${
-            idx === current ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
-          style={{ background: gradients[idx] }}
-        >
-          <div className="max-w-4xl mx-auto px-4 h-full flex items-center justify-center relative z-10">
-            <div className="content-box">
-              <h1 className="text-white text-5xl md:text-6xl font-extrabold mb-6 leading-tight">{slide.title}</h1>
-              <p className="text-gray-200 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">{slide.desc}</p>
-              <div className="btn-box">
-                <Link href="/iletisim" className="cs-btn-one btn-gradient-color text-base">
-                  İletişim
-                </Link>
+    <section className="banner-section">
+      <div className="relative">
+        {slides.map((slide, idx) => (
+          <div
+            key={idx}
+            className={`slide-item absolute inset-0 transition-opacity duration-1000 ${
+              idx === current ? "opacity-100 z-10 relative" : "opacity-0 z-0"
+            }`}
+            style={{ background: gradients[idx] }}
+          >
+            <div className="auto-container max-w-7xl mx-auto px-4">
+              <div className="content-box text-center">
+                <h1>{slide.title}</h1>
+                <p>{slide.desc}</p>
+                <div className="btn-box">
+                  <Link href="/iletisim" className="cs-btn-one btn-gradient-color">
+                    İletişim
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
       {/* Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
