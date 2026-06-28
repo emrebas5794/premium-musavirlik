@@ -21,14 +21,14 @@ export default function HeroSlider() {
   useEffect(() => { const t = setInterval(next, 5000); return () => clearInterval(t); }, [next]);
 
   return (
-    <section className="hero-slider" style={{ height: 540, background: "#061b31" }}>
+    <section className="hero-slider">
       {slides.map((s, i) => (
         <div key={i} className={`hero-slide${i === current ? " active" : ""}`}>
           <div className="hero-overlay" />
           <div className="max-w-7xl mx-auto px-4" style={{ position: "relative", zIndex: 1 }}>
             <h1>{s.title}</h1>
             <p>{s.desc}</p>
-            <Link href="/iletisim" className="btn btn-gradient btn-lg">İletişime Geç</Link>
+            <Link href="/iletisim" className="btn btn-light btn-lg">İletişime Geç</Link>
           </div>
         </div>
       ))}

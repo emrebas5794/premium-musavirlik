@@ -7,18 +7,16 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section style={{ padding: "80px 0" }}>
+    <section className="section">
       <div className="max-w-7xl mx-auto px-4">
-        <div style={{ textAlign: "center", marginBottom: 56 }}>
+        <div className="section-header">
           <div className="section-label">Çalışma Sürecimiz</div>
-          <h2 className="section-heading">Nasıl Çalışıyoruz?</h2>
+          <h2 className="section-title">Nasıl Çalışıyoruz?</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((s, i) => (
-            <div key={i} className="card" style={{ textAlign: "center" }}>
-              <div className="card-icon" style={{ margin: "0 auto 16px", width: 56, height: 56, borderRadius: "50%", fontSize: 20, fontWeight: 700 }}>
-                {i + 1}
-              </div>
+            <div key={i} className="process-card">
+              <div className="step-number">{i + 1}</div>
               <h3>{s.title}</h3>
               <p>{s.desc}</p>
             </div>

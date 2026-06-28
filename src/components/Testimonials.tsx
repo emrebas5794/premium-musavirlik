@@ -7,11 +7,11 @@ const items = [
 
 export default function Testimonials() {
   return (
-    <section className="section-light" style={{ padding: "80px 0" }}>
+    <section className="section section-alt">
       <div className="max-w-7xl mx-auto px-4">
-        <div style={{ textAlign: "center", marginBottom: 56 }}>
+        <div className="section-header">
           <div className="section-label">Referanslar</div>
-          <h2 className="section-heading">Müşterilerimiz Ne Diyor?</h2>
+          <h2 className="section-title">Müşterilerimiz Ne Diyor?</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {items.map((t, i) => (

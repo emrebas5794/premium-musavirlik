@@ -8,19 +8,19 @@ const items = [
 
 export default function Announcements() {
   return (
-    <section style={{ padding: "80px 0" }}>
+    <section className="section">
       <div className="max-w-7xl mx-auto px-4">
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 48, flexWrap: "wrap", gap: 16 }}>
+        <div className="section-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", textAlign: "left", flexWrap: "wrap", gap: 16 }}>
           <div>
             <div className="section-label">Güncel</div>
-            <h2 className="section-heading" style={{ marginBottom: 0 }}>Duyurular ve Blog</h2>
+            <h2 className="section-title" style={{ marginBottom: 0 }}>Duyurular ve Blog</h2>
           </div>
           <Link href="/duyurular" className="btn btn-outline">Tümünü Gör</Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item, i) => (
             <div key={i} className="news-card">
-              <div className="news-image" style={{ background: "linear-gradient(135deg, #0e4354, #134354, #55bab3)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "3rem", color: "rgba(255,255,255,0.3)" }}>📋</div>
+              <div className="news-image">📋</div>
               <div className="news-body">
                 <h4><Link href={item.href}>{item.title}</Link></h4>
                 <div className="news-date">📅 {item.date}</div>

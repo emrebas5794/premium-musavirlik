@@ -11,12 +11,12 @@ const services = [
 
 export default function ServiceCards() {
   return (
-    <section className="section-light" style={{ padding: "80px 0" }}>
+    <section className="section section-alt">
       <div className="max-w-7xl mx-auto px-4">
-        <div style={{ textAlign: "center", marginBottom: 56 }}>
+        <div className="section-header">
           <div className="section-label">Hizmetlerimiz</div>
-          <h2 className="section-heading">Premium Danışmanlık Çözümleri</h2>
-          <p className="section-subtitle" style={{ margin: "0 auto" }}>
+          <h2 className="section-title">Premium Danışmanlık Çözümleri</h2>
+          <p className="section-subtitle">
             2018&apos;den beri 40 kişilik uzman ekibimizle işletmenizin tüm finansal süreçlerinde yanınızdayız.
           </p>
         </div>
@@ -24,11 +24,11 @@ export default function ServiceCards() {
           {services.map((s, i) => (
             <div key={i} className="feature-card">
               <div className="card-image">
-                <div className="bg" style={{ background: "linear-gradient(135deg, #0e4354, #134354, #55bab3)", fontSize: "3rem" }}>{s.icon}</div>
+                <div className="bg">{s.icon}</div>
               </div>
               <div className="card-body">
                 <h3>{s.title}</h3>
-                <p style={{ fontSize: "0.85rem", marginTop: 8 }}>{s.desc}</p>
+                <p>{s.desc}</p>
                 <Link href="/hizmetler" className="card-link">→</Link>
               </div>
             </div>

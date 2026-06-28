@@ -7,13 +7,13 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <img src="/logo.png" alt="PMDTR" style={{ height: 36, marginBottom: 16 }} />
-            <p style={{ fontSize: "0.9rem", lineHeight: 1.7, color: "rgba(255,255,255,0.5)" }}>
+            <p style={{ fontSize: "0.9rem", lineHeight: 1.7, color: "rgba(255,255,255,0.5)", marginBottom: 0 }}>
               PMDTR - Premium Danışmanlık; muhasebe, mali müşavirlik, vergi, SGK ve danışmanlık alanlarında 40 kişilik uzman kadrosuyla 2018&apos;den beri hizmet vermektedir.
             </p>
           </div>
           <div>
             <h5>Hızlı Menü</h5>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {["Anasayfa", "Hakkımızda", "Hizmetlerimiz", "Referanslar", "Duyurular", "İletişim"].map((l, i) => (
                 <Link key={i} href={l === "Anasayfa" ? "/" : `/${l.toLowerCase().replace("ı","i").replace("ş","s")}`}>{l}</Link>
               ))}
@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
           <div>
             <h5>Hizmetler</h5>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {["Muhasebe", "KDV İadesi", "Bordrolama", "Şirket Kurma", "Vergi Danışmanlığı", "SGK Teşvik"].map((l, i) => (
                 <Link key={i} href="/hizmetler">{l}</Link>
               ))}
@@ -29,20 +29,16 @@ export default function Footer() {
           </div>
           <div>
             <h5>İletişim</h5>
-            <div style={{ fontSize: "0.9rem", lineHeight: 1.8 }}>
-              <p style={{ margin: "0 0 12px", color: "rgba(255,255,255,0.5)" }}>
-                Kartaltepe Mah. İncirli Cad. No.46 D.11<br />Bakırköy / İSTANBUL
-              </p>
-              <p style={{ margin: "0 0 4px" }}>📞 +90 212 438 0464</p>
-              <p style={{ margin: "0 0 4px" }}>📱 +90 545 366 09 96</p>
-              <p style={{ margin: 0 }}>✉️ info@pmdtr.com</p>
-            </div>
+            <p style={{ fontSize: "0.9rem", lineHeight: 1.9, color: "rgba(255,255,255,0.5)", margin: 0 }}>
+              Kartaltepe Mah. İncirli Cad. No.46 D.11<br />Bakırköy / İSTANBUL
+            </p>
+            <p style={{ fontSize: "0.9rem", margin: "12px 0 4px" }}>📞 +90 212 438 0464</p>
+            <p style={{ fontSize: "0.9rem", margin: "0 0 4px" }}>📱 +90 545 366 09 96</p>
+            <p style={{ fontSize: "0.9rem", margin: 0 }}>✉️ info@pmdtr.com</p>
           </div>
         </div>
         <div className="footer-bottom">
-          <div className="max-w-7xl mx-auto px-4" style={{ textAlign: "center" }}>
-            © {new Date().getFullYear()} PMDTR - Premium Danışmanlık. Tüm hakları saklıdır.
-          </div>
+          © {new Date().getFullYear()} PMDTR - Premium Danışmanlık. Tüm hakları saklıdır.
         </div>
       </div>
     </footer>

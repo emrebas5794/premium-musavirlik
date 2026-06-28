@@ -7,11 +7,11 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="section-dark" style={{ padding: "80px 0" }}>
-      <div className="max-w-7xl mx-auto px-4" style={{ position: "relative", zIndex: 1 }}>
-        <div style={{ textAlign: "center", marginBottom: 48 }}>
-          <div className="section-label" style={{ color: "var(--primary-light)" }}>PMDTR Rakamlarla</div>
-          <h2 style={{ color: "#fff", fontSize: "2.25rem", fontWeight: 600 }}>Neden Bizi Tercih Etmelisiniz?</h2>
+    <section className="section section-dark">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="section-header">
+          <div className="section-label">PMDTR Rakamlarla</div>
+          <h2 className="section-title">Neden Bizi Tercih Etmelisiniz?</h2>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((s, i) => (
