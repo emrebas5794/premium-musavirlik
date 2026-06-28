@@ -1,52 +1,26 @@
 const steps = [
-  {
-    icon: "📋",
-    title: "Planlama",
-    description: "Hızlı bilgi ile süreçlerinizi planlıyoruz. Zamandan tasarruf hepimiz için önemli bir kriterdir.",
-  },
-  {
-    icon: "🔍",
-    title: "Analiz",
-    description: "Süreçlerinizi sizden en iyi şekilde dinleyip, en iyi şekilde analizlerimizi yapıyoruz.",
-  },
-  {
-    icon: "⚡",
-    title: "Yönetim",
-    description: "Süreçleriniz için en iyi yönetim planlamasını ortaya çıkarıp, sizin için uyguluyoruz.",
-  },
-  {
-    icon: "🤝",
-    title: "Destek",
-    description: "Sorularınız, düşünceleriniz, fikirleriniz için sizlere en iyi desteği vermeye her zaman hazırız.",
-  },
+  { title: "Planlama", desc: "İşletmenizin ihtiyaçlarını analiz edip en uygun vergi ve finansal stratejiyi belirliyoruz." },
+  { title: "Uygulama", desc: "Muhasebe, bordro ve vergi süreçlerinizi mevzuata uygun şekilde yürütüyoruz." },
+  { title: "Takip", desc: "SGK teşvikleri, KDV iadeleri ve devlet desteklerinden maksimum faydalanmanızı sağlıyoruz." },
+  { title: "Danışmanlık", desc: "Vergi ihtilafları, şirket birleşmeleri ve uluslararası işlemlerde yanınızdayız." },
 ];
 
 export default function ProcessSection() {
   return (
-    <section className="py-20 bg-silver-light">
+    <section style={{ padding: "80px 0" }}>
       <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
-          <div>
-            <h5 className="section-subtitle mb-4">Premium Danışmanlık</h5>
-            <h2 className="section-title">Sizin İçin Buradayız!</h2>
-          </div>
-          <div className="flex items-center">
-            <p className="text-gray-500">
-              Zaman, Maliyet, Planlama, Süreç ve daha bir sürü akılda kalan düşünceler. Hepsi için buradayız.
-            </p>
-          </div>
+        <div style={{ textAlign: "center", marginBottom: 56 }}>
+          <div className="section-label">Çalışma Sürecimiz</div>
+          <h2 className="section-heading">Nasıl Çalışıyoruz?</h2>
         </div>
-
-        {/* Steps Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step, idx) => (
-            <div key={idx} className="service-box group rounded-xl">
-              <div className="service-icon group-hover:bg-primary group-hover:text-white transition">
-                <span className="text-3xl">{step.icon}</span>
+          {steps.map((s, i) => (
+            <div key={i} className="card" style={{ textAlign: "center" }}>
+              <div className="card-icon" style={{ margin: "0 auto 16px", width: 56, height: 56, borderRadius: "50%", fontSize: 20, fontWeight: 700 }}>
+                {i + 1}
               </div>
-              <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition">{step.title}</h3>
-              <p className="text-gray-500 text-sm">{step.description}</p>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
             </div>
           ))}
         </div>

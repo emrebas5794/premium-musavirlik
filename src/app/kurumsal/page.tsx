@@ -1,39 +1,21 @@
-import PageBanner from "@/components/PageBanner";
 import Link from "next/link";
-
-export const metadata = {
-  title: "Kurumsal - Premium Danışmanlık",
-};
 
 export default function Kurumsal() {
   return (
     <>
-      <PageBanner
-        title="Kurumsal"
-        breadcrumbs={[{ label: "Anasayfa", href: "/" }, { label: "Kurumsal" }]}
-      />
-
-      <section className="pdt-105 pdb-80 bg-silver-light">
+      <section className="page-banner"><div className="max-w-7xl mx-auto px-4"><div className="banner-content"><h1>Kurumsal</h1><div className="breadcrumb"><a href="/">Anasayfa</a><span>/</span><span>Kurumsal</span></div></div></div></section>
+      <section style={{ padding: "80px 0", background: "var(--surface-alt)" }}>
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link href="/hakkimizda" className="feature-box group p-8 flex flex-col items-center text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#0e4354] to-[#55bab3] rounded-xl flex items-center justify-center text-white text-3xl mrb-20">
-                🏢
-              </div>
-              <h3 className="mrb-15 group-hover:text-primary transition">Hakkımızda</h3>
-              <p className="text-gray-500 text-sm">
-                Premium Danışmanlık'ın kuruluş hikayesi, misyonu, vizyonu ve ekibi hakkında detaylı bilgi.
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/hakkimizda" className="card" style={{ textDecoration: "none", padding: 40, textAlign: "center" }}>
+              <div style={{ fontSize: "2.5rem", marginBottom: 16 }}>🏢</div>
+              <h3>Hakkımızda</h3>
+              <p>PMDTR&apos;nin kuruluş hikayesi, misyonu ve vizyonu.</p>
             </Link>
-
-            <Link href="/referanslar" className="feature-box group p-8 flex flex-col items-center text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#0e4354] to-[#55bab3] rounded-xl flex items-center justify-center text-white text-3xl mrb-20">
-                🤝
-              </div>
-              <h3 className="mrb-15 group-hover:text-primary transition">Referanslarımız</h3>
-              <p className="text-gray-500 text-sm">
-                Birlikte çalıştığımız firmalar ve başarı hikayelerimiz.
-              </p>
+            <Link href="/referanslar" className="card" style={{ textDecoration: "none", padding: 40, textAlign: "center" }}>
+              <div style={{ fontSize: "2.5rem", marginBottom: 16 }}>🤝</div>
+              <h3>Referanslarımız</h3>
+              <p>Birlikte çalıştığımız firmalar ve başarı hikayelerimiz.</p>
             </Link>
           </div>
         </div>

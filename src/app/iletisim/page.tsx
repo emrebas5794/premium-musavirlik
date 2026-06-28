@@ -1,147 +1,44 @@
 "use client";
-
 import { useState } from "react";
-import PageBanner from "@/components/PageBanner";
-
-const serviceOptions = [
-  "Hizmet Seçiniz",
-  "Muhasebe ve Mali Müşavirlik Hizmetleri",
-  "KDV ve ÖTV İade Hizmetleri",
-  "Şirket Tür Değişikliği",
-  "Şirket Birleşme ve Satın Alma Hizmetleri",
-  "Transfer Fiyatlandırması",
-  "Uluslararası Vergi Hizmetleri",
-  "Bordrolama",
-  "İş ve Sosyal Güvenlik Check-Up Hizmetleri",
-  "İkamet İzni & Çalışma İzni",
-  "Asgari İşçilik Danışmanlığı",
-  "Alt İşveren (Taşeron) Denetimi",
-  "Emeklilik ve Tahsis İşlemleri Danışmanlığı",
-  "Şirket Kurma Hizmetleri",
-  "Vergi Danışmanlığı",
-  "Yönetim Destek Hizmetleri",
-  "Genel Kurul Danışmanlığı",
-  "İş Hukuku Danışmanlığı",
-  "Vergi İhtilafları Danışmanlığı",
-  "Sosyal Güvenlik Teşvikleri Danışmanlığı",
-];
 
 export default function Iletisim() {
   const [sent, setSent] = useState(false);
-
   return (
     <>
-      <PageBanner
-        title="İletişim"
-        breadcrumbs={[{ label: "Anasayfa", href: "/" }, { label: "İletişim" }]}
-      />
-
-      <section className="py-16 md:py-24">
+      <section className="page-banner"><div className="max-w-7xl mx-auto px-4"><div className="banner-content"><h1>İletişim</h1><div className="breadcrumb"><a href="/">Anasayfa</a><span>/</span><span>İletişim</span></div></div></div></section>
+      <section style={{ padding: "80px 0" }}>
         <div className="max-w-7xl mx-auto px-4">
-          {/* Contact Blocks */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 md:mb-16">
-            <div className="contact-block flex items-start gap-6">
-              <div className="contact-icon flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#0e4354] to-[#55bab3] rounded-lg flex items-center justify-center text-white text-2xl">
-                  📍
-                </div>
-              </div>
-              <div>
-                <h5 className="text-lg font-semibold mb-2">Adres</h5>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  Kartaltepe Mah. İncirli Cad. No.46 D.11<br />Bakırköy / İSTANBUL
-                </p>
-              </div>
-            </div>
-
-            <div className="contact-block flex items-start gap-6">
-              <div className="contact-icon flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#0e4354] to-[#55bab3] rounded-lg flex items-center justify-center text-white text-2xl">
-                  📞
-                </div>
-              </div>
-              <div>
-                <h5 className="text-lg font-semibold mb-2">Telefon</h5>
-                <p className="text-gray-500 text-sm">
-                  <a href="tel:+902124380464" className="hover:text-primary">+90 212 438 0464</a>
-                </p>
-                <p className="text-gray-500 text-sm mt-1">
-                  <a href="tel:+905453660996" className="hover:text-primary">+90 545 366 09 96</a>
-                </p>
-              </div>
-            </div>
-
-            <div className="contact-block flex items-start gap-6">
-              <div className="contact-icon flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#0e4354] to-[#55bab3] rounded-lg flex items-center justify-center text-white text-2xl">
-                  ✉️
-                </div>
-              </div>
-              <div>
-                <h5 className="text-lg font-semibold mb-2">E-Posta</h5>
-                <p className="text-gray-500 text-sm">
-                  <a href="mailto:info@pmdtr.com" className="hover:text-primary">info@pmdtr.com</a>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Form + Info */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            <div className="lg:col-span-5">
-              <h5 className="sub-title-side-line text-primary-color mb-3 text-sm md:text-base">
-                PMDTR - Premium Danışmanlık
-              </h5>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-[#151a33] mb-6">İletişim Formu</h2>
-              <p className="text-gray-500 mb-8">
-                Aşağıdaki formu doldurarak bizimle iletişime geçebilir veya sosyal medya üzerinden bizimle iletişime geçebilirsiniz.
-              </p>
-              <div className="flex gap-3">
-                {["📷", "🔗", "💬"].map((icon, i) => (
-                  <a key={i} href="#" className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-lg hover:bg-primary-light transition">
-                    {icon}
-                  </a>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <div className="section-label">Bize Ulaşın</div>
+              <h2 className="section-heading">İletişim Bilgilerimiz</h2>
+              <div style={{ display: "flex", flexDirection: "column", gap: 20, marginTop: 32 }}>
+                {[
+                  { icon: "📍", title: "Adres", text: "Kartaltepe Mah. İncirli Cad. No.46 D.11 Bakırköy / İSTANBUL" },
+                  { icon: "📞", title: "Telefon", text: "+90 212 438 0464" },
+                  { icon: "📱", title: "Cep", text: "+90 545 366 09 96" },
+                  { icon: "✉️", title: "E-Posta", text: "info@pmdtr.com" },
+                ].map((c, i) => (
+                  <div key={i} style={{ display: "flex", gap: 14 }}>
+                    <div style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--surface-alt)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>{c.icon}</div>
+                    <div><strong style={{ color: "var(--heading)" }}>{c.title}</strong><br /><span style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>{c.text}</span></div>
+                  </div>
                 ))}
               </div>
             </div>
-
-            <div className="lg:col-span-7">
-              <div className="request-a-call-back-form">
-                {sent ? (
-                  <div className="bg-green-50 text-green-700 p-6 rounded-lg text-center">
-                    ✅ Mesajınız başarıyla gönderildi! En kısa sürede dönüş yapacağız.
-                  </div>
-                ) : (
-                  <form onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div className="form-group">
-                        <input type="text" className="form-control" placeholder="Adınız Soyadınız" required />
-                      </div>
-                      <div className="form-group">
-                        <input type="tel" className="form-control" placeholder="Telefon" required />
-                      </div>
-                      <div className="form-group">
-                        <input type="email" className="form-control" placeholder="E-Posta" required />
-                      </div>
-                      <div className="form-group">
-                        <select className="custom-select-categories" defaultValue="">
-                          {serviceOptions.map((opt, i) => (
-                            <option key={i} value={i === 0 ? "" : opt} disabled={i === 0}>
-                              {opt}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
-                    <div className="form-group">
-                      <textarea className="form-control" rows={4} placeholder="Mesajınız" />
-                    </div>
-                    <button type="submit" className="cs-btn-one btn-gradient-color btn-md btn-block">
-                      Gönder
-                    </button>
-                  </form>
-                )}
-              </div>
+            <div className="contact-form-card">
+              <h3 style={{ marginBottom: 8 }}>İletişim Formu</h3>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", marginBottom: 20 }}>Formu doldurun, en kısa sürede dönüş yapalım.</p>
+              {sent ? <div style={{ textAlign: "center", padding: 24, color: "#15be53" }}>✅ Gönderildi!</div> : (
+                <form onSubmit={e => { e.preventDefault(); setSent(true); }} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                  <input className="form-control" type="text" placeholder="Adınız Soyadınız" required />
+                  <input className="form-control" type="tel" placeholder="Telefon" required />
+                  <input className="form-control" type="email" placeholder="E-Posta" required />
+                  <select className="form-control" defaultValue=""><option disabled value="">Hizmet Seçiniz</option><option>Muhasebe</option><option>KDV İade</option><option>Bordrolama</option><option>Diğer</option></select>
+                  <textarea className="form-control" rows={3} placeholder="Mesajınız" />
+                  <button type="submit" className="btn btn-gradient btn-lg" style={{ width: "100%" }}>Gönder</button>
+                </form>
+              )}
             </div>
           </div>
         </div>

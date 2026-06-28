@@ -2,94 +2,52 @@
 
 import { useState } from "react";
 
-const serviceOptions = [
-  "Hizmet Seçiniz",
-  "Muhasebe ve Mali Müşavirlik Hizmetleri",
-  "KDV ve ÖTV İade Hizmetleri",
-  "Bordrolama",
-  "Şirket Kurma Hizmetleri",
-  "Vergi Danışmanlığı",
-  "İş Hukuku Danışmanlığı",
-  "Diğer",
-];
-
 export default function ContactSection() {
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
-  };
-
   return (
-    <section className="py-16 md:py-24 relative" data-overlay-dark="8">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ background: "linear-gradient(135deg, #0e4354, #131c34, #55bab3)" }}
-      />
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-10 items-start">
-          {/* Video Area */}
-          <div className="lg:col-span-3">
-            <div className="video-popup rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-br from-[#0e4354]/30 to-[#55bab3]/30 h-64 md:h-[420px] flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-4 md:mb-5 cursor-pointer hover:bg-white/20 transition">
-                    <svg className="w-7 h-7 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-white/60 text-sm md:text-base">PMDTR Tanıtım</p>
-                </div>
+    <section style={{ padding: "80px 0" }}>
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12" style={{ alignItems: "center" }}>
+          <div>
+            <div className="section-label">İletişim</div>
+            <h2 className="section-heading">Bizimle İletişime Geçin</h2>
+            <p className="section-subtitle" style={{ marginBottom: 32 }}>
+              Aşağıdaki formu doldurarak bizimle iletişime geçebilirsiniz. En kısa sürede size dönüş yapacağız.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <div style={{ width: 44, height: 44, borderRadius: "50%", background: "var(--surface-alt)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--primary)", fontWeight: 700 }}>📍</div>
+                <div><strong style={{ color: "var(--heading)" }}>Adres</strong><br /><span style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>Kartaltepe Mah. İncirli Cad. No.46 D.11 Bakırköy / İSTANBUL</span></div>
+              </div>
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <div style={{ width: 44, height: 44, borderRadius: "50%", background: "var(--surface-alt)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--primary)", fontWeight: 700 }}>📞</div>
+                <div><strong style={{ color: "var(--heading)" }}>Telefon</strong><br /><span style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>+90 212 438 0464</span></div>
               </div>
             </div>
           </div>
 
-          {/* Form */}
-          <div className="lg:col-span-2">
-            <div className="request-a-call-back-form">
-              <h3 className="text-xl md:text-2xl font-bold text-[#151a33] mb-2">Bizimle İletişime Geçin</h3>
-              <div className="w-16 h-1 bg-gradient-to-r from-[#0e4354] to-[#55bab3] rounded mb-4" />
-              <p className="text-gray-500 text-xs md:text-sm mb-5 md:mb-6">
-                Aşağıdaki formu doldurarak bizimle iletişime geçebilirsiniz.
-              </p>
-
-              {sent ? (
-                <div className="bg-green-50 text-green-700 p-4 rounded-lg text-center text-sm">
-                  ✅ Mesajınız başarıyla gönderildi! En kısa sürede dönüş yapacağız.
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit}>
-                  <div className="form-group">
-                    <input type="text" className="form-control" placeholder="Adınız Soyadınız" required />
-                  </div>
-                  <div className="form-group">
-                    <input type="tel" className="form-control" placeholder="Telefon" required />
-                  </div>
-                  <div className="form-group">
-                    <input type="email" className="form-control" placeholder="E-Posta" required />
-                  </div>
-                  <div className="form-group">
-                    <select className="custom-select-categories" defaultValue="">
-                      {serviceOptions.map((opt, i) => (
-                        <option key={i} value={i === 0 ? "" : opt} disabled={i === 0}>
-                          {opt}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="form-group mb-4 md:mb-5">
-                    <input type="text" className="form-control" placeholder="Güvenlik Kodu" />
-                  </div>
-                  <div className="form-group mb-0">
-                    <button type="submit" className="cs-btn-one btn-primary-color btn-md btn-block text-sm md:text-base">
-                      Gönder
-                    </button>
-                  </div>
-                </form>
-              )}
-            </div>
+          <div className="contact-form-card">
+            {sent ? (
+              <div style={{ textAlign: "center", padding: 32, color: "#15be53" }}>✅ Mesajınız başarıyla gönderildi!</div>
+            ) : (
+              <form onSubmit={e => { e.preventDefault(); setSent(true); }} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                <input className="form-control" type="text" placeholder="Adınız Soyadınız" required />
+                <input className="form-control" type="tel" placeholder="Telefon" required />
+                <input className="form-control" type="email" placeholder="E-Posta" required />
+                <select className="form-control" defaultValue="">
+                  <option value="" disabled>Hizmet Seçiniz</option>
+                  <option>Muhasebe ve Mali Müşavirlik</option>
+                  <option>KDV ve ÖTV İade</option>
+                  <option>Bordrolama ve SGK</option>
+                  <option>Şirket Kurma</option>
+                  <option>Vergi Danışmanlığı</option>
+                  <option>Diğer</option>
+                </select>
+                <textarea className="form-control" rows={3} placeholder="Mesajınız" />
+                <button type="submit" className="btn btn-gradient btn-lg" style={{ width: "100%" }}>Gönder</button>
+              </form>
+            )}
           </div>
         </div>
       </div>
