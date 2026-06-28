@@ -24,17 +24,20 @@ export default function HomeSlider() {
   }, [next]);
 
   return (
-    <section className="banner-section">
-      <div className="relative">
+    <section className="banner-section relative">
+      {/* Slides container with explicit height */}
+      <div className="relative w-full" style={{ minHeight: "500px", padding: "200px 0" }}>
         {slides.map((slide, idx) => (
           <div
             key={idx}
-            className={`slide-item absolute inset-0 transition-opacity duration-1000 ${
-              idx === current ? "opacity-100 z-10 relative" : "opacity-0 z-0"
-            }`}
-            style={{ background: `linear-gradient(135deg, #0a2a35, #09334f, #0e4354)` }}
+            className="absolute inset-0 transition-opacity duration-1000 flex items-center"
+            style={{
+              opacity: idx === current ? 1 : 0,
+              zIndex: idx === current ? 10 : 0,
+              background: "linear-gradient(135deg, #0a2a35, #09334f, #0e4354)",
+            }}
           >
-            <div className="auto-container max-w-7xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-4 w-full">
               <div className="content-box text-center">
                 <h1>{slide.title}</h1>
                 <p>{slide.desc}</p>
@@ -48,6 +51,8 @@ export default function HomeSlider() {
           </div>
         ))}
       </div>
+
+      {/* Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
         {slides.map((_, i) => (
           <button
