@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
 
 export const metadata: Metadata = {
   title: "PMDTR - Premium Danışmanlık | Muhasebe, Vergi, SGK, Danışmanlık",
@@ -19,9 +21,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <FloatingWhatsApp />
+        </LanguageProvider>
       </body>
     </html>
   );

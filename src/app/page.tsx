@@ -4,7 +4,7 @@ import StatsSection from "@/components/StatsSection";
 import ProcessSection from "@/components/ProcessSection";
 import Testimonials from "@/components/Testimonials";
 import Announcements from "@/components/Announcements";
-import ContactSection from "@/components/ContactSection";
+import NewsletterSection from "@/components/NewsletterSection";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <ProcessSection />
       <Testimonials />
       <Announcements />
-      <ContactSection />
+      <NewsletterSection />
     </>
   );
 }

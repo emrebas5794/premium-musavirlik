@@ -12,7 +12,7 @@ const serviceOptions = [
   "Belgelendirme Hizmetleri",
   "Eğitim Hizmetleri",
   "Patent Süreçleri",
-  "Web Tasarım Hizmetleri",
+  "TEKMER Danışmanlığı",
   "Bordrolama Hizmetleri",
   "Stratejik İş Ortaklığı",
 ];

@@ -1,8 +1,27 @@
+"use client";
+
+import { useLanguage } from "@/i18n/LanguageProvider";
+
 export default function Referanslar() {
-  const refs = Array.from({ length: 24 }, (_, i) => `İş Ortağı ${i + 1}`);
+  const { locale, t } = useLanguage();
+  const title = t.pages.references.title;
+  const label = locale === "tr" ? "İş Ortağı" : "Partner";
+  const refs = Array.from({ length: 24 }, (_, i) => `${label} ${i + 1}`);
+
   return (
     <>
-      <section className="page-banner"><div className="max-w-7xl mx-auto px-4"><div className="banner-content"><h1>Referanslar</h1><div className="breadcrumb"><a href="/">Anasayfa</a><span>/</span><span>Referanslar</span></div></div></div></section>
+      <section className="page-banner">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="banner-content">
+            <h1>{title}</h1>
+            <div className="breadcrumb">
+              <a href="/">{t.common.home}</a>
+              <span>/</span>
+              <span>{title}</span>
+            </div>
+          </div>
+        </div>
+      </section>
       <section style={{ padding: "80px 0", background: "var(--surface-alt)" }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
